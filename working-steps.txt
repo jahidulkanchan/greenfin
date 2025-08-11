@@ -1,0 +1,79 @@
+src/
+│
+├── app/
+│   ├── layout.jsx                  # মূল সাইট লেআউট (header, footer, global)
+│   ├── page.jsx                    # হোমপেজ
+│
+│   ├── bonsai/
+│   │    ├── page.jsx
+│   │    └── [productId]/page.jsx
+│
+│   ├── aquarium/
+│   │    ├── page.jsx
+│   │    └── [productId]/page.jsx
+│
+│   ├── dashboard/                  # ড্যাশবোর্ডের রুট
+│   │    ├── layout.jsx            # ড্যাশবোর্ডের আলাদা লেআউট (sidebar, nav)
+│   │    ├── admin/
+│   │    │    ├── page.jsx         # অ্যাডমিন ড্যাশবোর্ড হোম
+│   │    │    ├── sales-items/     # সেলস আইটেম ম্যানেজমেন্ট
+│   │    │    │    ├── page.jsx
+│   │    │    │    └── [itemId]/page.jsx
+│   │    │    ├── orders/          # অর্ডার ম্যানেজমেন্ট
+│   │    │    │    ├── page.jsx
+│   │    │    │    └── [orderId]/page.jsx
+│   │    │    ├── payments/        # পেমেন্ট কন্ট্রোল
+│   │    │    │    ├── page.jsx
+│   │    │    │    └── [paymentId]/page.jsx
+│   │    │    ├── users/           # ইউজার ম্যানেজমেন্ট
+│   │    │    │    ├── page.jsx
+│   │    │    │    └── [userId]/page.jsx
+│   │    │    └── reports/         # রিপোর্ট ও অ্যানালিটিক্স
+│   │    │         └── page.jsx
+│   │    │
+│   │    └── customer/
+│   │         ├── page.jsx         # কাস্টমার ড্যাশবোর্ড হোম
+│   │         ├── profile/         # প্রোফাইল ম্যানেজমেন্ট
+│   │         │    └── page.jsx
+│   │         ├── orders/          # কাস্টমারের অর্ডার হিস্ট্রি
+│   │         │    ├── page.jsx
+│   │         │    └── [orderId]/page.jsx
+│   │         ├── wishlist/        # উইশলিস্ট পেজ
+│   │         │    └── page.jsx
+│   │         ├── payments/        # পেমেন্ট হিস্ট্রি
+│   │         │    └── page.jsx
+│   │         └── support/         # কাস্টমার সার্পোর্ট / হেল্প
+│   │              └── page.jsx
+│
+├── controllers/
+│    ├── bonsaiController.js
+│    ├── aquariumController.js
+│    ├── adminController.js
+│    └── customerController.js
+│
+├── models/
+│    ├── Bonsai.js
+│    ├── Aquarium.js
+│    ├── User.js
+│    ├── Order.js
+│    ├── Payment.js
+│    └── Product.js
+│
+├── services/
+│    ├── bonsaiService.js
+│    ├── aquariumService.js
+│    ├── adminService.js
+│    └── customerService.js
+│
+├── utils/
+│
+├── public/
+│    └── assets/
+│         ├── images/
+│         │    ├── bonsai/
+│         │    └── aquarium/
+│         ├── fonts/
+│         ├── icons/
+│         └── videos/
+│
+└── styles/
