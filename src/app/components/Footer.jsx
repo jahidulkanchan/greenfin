@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 export default function Footer() {
   return (
-    <>
-    <footer>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cumque obcaecati quisquam dolorem incidunt cum corrupti accusamus consectetur id asperiores, fugiat voluptates, aliquam eligendi earum minus dolores pariatur ea? Facilis.
+    <footer className="bg-slate-50 py-6 px-4 text-center font-sans text-sm">
+      <p>&copy; {new Date().getFullYear()} Greenfin. All rights reserved.</p>
+      <p className="mt-1">
+        Crafted with <span className="text-green-300">💚</span> for sustainable growth and innovation.
+      </p>
     </footer>
-    </>
-  )
+  );
 }
