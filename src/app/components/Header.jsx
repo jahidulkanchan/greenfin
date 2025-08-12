@@ -19,7 +19,7 @@ export default function Header() {
                 <Link href="/dashboard">Dashboard</Link>
               </li>
               <li>
-                <Link href="/auth/signup">Singup</Link>
+                <Link href="/signup">Singup</Link>
               </li>
             </ul>
           </div>

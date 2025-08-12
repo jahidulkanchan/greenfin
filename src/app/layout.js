@@ -1,6 +1,6 @@
-import './globals.css';
-import Header from './components/Header';
 import Footer from './components/Footer';
+import Header from './components/Header';
+import './globals.css';
 
 export const metadata = {
   title: 'GreenFin - Premium Bonsai & Aquarium Fish for Nature Lovers',
