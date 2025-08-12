@@ -1,79 +1,60 @@
 src/
 │
 ├── app/
-│   ├── layout.jsx                  # মূল সাইট লেআউট (header, footer, global)
-│   ├── page.jsx                    # হোমপেজ
-│
-│   ├── bonsai/
-│   │    ├── page.jsx
-│   │    └── [productId]/page.jsx
-│
-│   ├── aquarium/
-│   │    ├── page.jsx
-│   │    └── [productId]/page.jsx
-│
-│   ├── dashboard/                  # ড্যাশবোর্ডের রুট
-│   │    ├── layout.jsx            # ড্যাশবোর্ডের আলাদা লেআউট (sidebar, nav)
+│   ├── layout.jsx
+│   ├── page.jsx
+│   ├── auth/
+│   │    ├── login/page.jsx
+│   │    ├── signup/page.jsx
+│   │    ├── reset-password/page.jsx
+│   ├── dashboard/
+│   │    ├── layout.jsx
 │   │    ├── admin/
-│   │    │    ├── page.jsx         # অ্যাডমিন ড্যাশবোর্ড হোম
-│   │    │    ├── sales-items/     # সেলস আইটেম ম্যানেজমেন্ট
-│   │    │    │    ├── page.jsx
-│   │    │    │    └── [itemId]/page.jsx
-│   │    │    ├── orders/          # অর্ডার ম্যানেজমেন্ট
-│   │    │    │    ├── page.jsx
-│   │    │    │    └── [orderId]/page.jsx
-│   │    │    ├── payments/        # পেমেন্ট কন্ট্রোল
-│   │    │    │    ├── page.jsx
-│   │    │    │    └── [paymentId]/page.jsx
-│   │    │    ├── users/           # ইউজার ম্যানেজমেন্ট
-│   │    │    │    ├── page.jsx
-│   │    │    │    └── [userId]/page.jsx
-│   │    │    └── reports/         # রিপোর্ট ও অ্যানালিটিক্স
-│   │    │         └── page.jsx
-│   │    │
+│   │    │    ├── page.jsx
+│   │    │    ├── sales-items/page.jsx
+│   │    │    └── sales-items/[itemId]/page.jsx
+│   │    │    ├── orders/page.jsx
+│   │    │    └── orders/[orderId]/page.jsx
+│   │    │    ├── payments/page.jsx
+│   │    │    └── payments/[paymentId]/page.jsx
+│   │    │    ├── users/page.jsx
+│   │    │    └── users/[userId]/page.jsx
+│   │    │    └── reports/page.jsx
 │   │    └── customer/
-│   │         ├── page.jsx         # কাস্টমার ড্যাশবোর্ড হোম
-│   │         ├── profile/         # প্রোফাইল ম্যানেজমেন্ট
-│   │         │    └── page.jsx
-│   │         ├── orders/          # কাস্টমারের অর্ডার হিস্ট্রি
-│   │         │    ├── page.jsx
-│   │         │    └── [orderId]/page.jsx
-│   │         ├── wishlist/        # উইশলিস্ট পেজ
-│   │         │    └── page.jsx
-│   │         ├── payments/        # পেমেন্ট হিস্ট্রি
-│   │         │    └── page.jsx
-│   │         └── support/         # কাস্টমার সার্পোর্ট / হেল্প
-│   │              └── page.jsx
+│   │         ├── page.jsx
+│   │         ├── profile/page.jsx
+│   │         ├── orders/page.jsx
+│   │         ├── orders/[orderId]/page.jsx
+│   │         ├── wishlist/page.jsx
+│   │         ├── payments/page.jsx
+│   │         └── support/page.jsx
+│   ├── api/
+│   │    ├── auth/
+│   │    │    ├── route.js   # or signup/route.js, login/route.js আলাদা থাকতে পারে
+│   │    ├── bonsai/route.js
+│   │    └── aquarium/route.js
 │
 ├── controllers/
-│    ├── bonsaiController.js
-│    ├── aquariumController.js
-│    ├── adminController.js
-│    └── customerController.js
-│
-├── models/
-│    ├── Bonsai.js
-│    ├── Aquarium.js
-│    ├── User.js
-│    ├── Order.js
-│    ├── Payment.js
-│    └── Product.js
+│   ├── authController.js
+│   ├── adminController.js
+│   ├── customerController.js
+│   ├── bonsaiController.js
+│   └── aquariumController.js
 │
 ├── services/
-│    ├── bonsaiService.js
-│    ├── aquariumService.js
-│    ├── adminService.js
-│    └── customerService.js
+│   ├── authService.js
+│   ├── adminService.js
+│   ├── customerService.js
+│   ├── bonsaiService.js
+│   └── aquariumService.js
 │
 ├── utils/
 │
 ├── public/
-│    └── assets/
-│         ├── images/
-│         │    ├── bonsai/
-│         │    └── aquarium/
-│         ├── fonts/
-│         ├── icons/
-│         └── videos/
+│   └── assets/
+│        ├── images/
+│        ├── fonts/
+│        ├── icons/
+│        └── videos/
 │
 └── styles/
