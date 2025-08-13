@@ -1,8 +1,11 @@
 'use client';
 import axiosPublic from '@/app/lib/axiosPublic';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 export default function SignUpPage() {
+  const router = useRouter();
+  const [errorMessage,setErorrMessage]  = useState('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,16 +22,18 @@ export default function SignUpPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErorrMessage('')
     try {
       const res = await axiosPublic.post('/auth/signup', formData);
       console.log('signup successfully');
-      if(res?.data){
-       setFormData({ name: '', email: '', password: '' });
+      if (res?.data) {
+        setFormData({ name: '', email: '', password: '' });
+        router.push('/login');
       }
     } catch (error) {
-      console.log('Signup Failed', error?.message || error);
+      setErorrMessage('Check Your Email & Password');
+      console.error('Signup Failed', error?.message || error);
     }
-    console.log('Form Data:', formData);
   };
 
   return (
@@ -46,6 +51,7 @@ export default function SignUpPage() {
         <br />
         <input className="border outline-none" id="password" type="password" value={formData.password} onChange={handleChange} />
         <br />
+        <p className='text-red-500'>{errorMessage}</p>
         <br />
         <input type="submit" className="border py-1.5 px-5" value="submit" />
       </form>
