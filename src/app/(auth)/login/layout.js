@@ -1,12 +1,3 @@
-import React from 'react'
-
-
-export default function LoginLayout({children}) {
-  return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
-  )
+export default function LoginLayout({ children }) {
+  return <>{children} </>;
 }
