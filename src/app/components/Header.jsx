@@ -13,7 +13,7 @@ export default function Header() {
             <div className="left-box absolute w-[20px] h-[20px] bg-[#eae0f9] rounded-bl-[20px] top-[-20px] left-[0px]"></div>
             {/* bottom radius box */}
             <div className="left-box absolute w-[20px] h-[20px] bg-white bottom-[-20px] left-[0px]"></div>
-            <div className="left-box absolute w-[20px] h-[20px] bg-[#eae0f9] rounded-tl-[20px] bottom-[-20px] left-[0px]"></div>
+            <div className="left-box absolute w-[20px] h-[20px] bg-[#e8dcfa] rounded-tl-[20px] bottom-[-20px] left-[0px]"></div>
             <nav className="flex justify-between gap-5 items-center px-5">
               <div className="logo flex w-fit justify-center items-end">
                 <Image className="w-[90px] py-1 md:py-2 md:w-[100px]" src="/assets/images/logo.png" alt="logo" width={100} height={100} />
