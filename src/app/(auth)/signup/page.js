@@ -31,7 +31,7 @@ export default function SignUpPage() {
         router.push('/login');
       }
     } catch (error) {
-      setErorrMessage('Check Your Email & Password');
+      setErorrMessage('Somthing is wrong try again');
       console.error('Signup Failed', error?.message || error);
     }
   };

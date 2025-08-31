@@ -26,7 +26,7 @@ export default function LoginPage() {
       const res = await axiosPublic.post('/auth/login', formData);
       if (res?.data) {
         setFormData({ email: '', password: '' });
-        router.push('/')
+        router.push('/dashboard')
       }
     } catch (error) {
       setErorrMessage('Invalid Email or Password');
